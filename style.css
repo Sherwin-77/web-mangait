@@ -58,7 +58,20 @@ header .nav-item {
 .side * {
     flex: 0;
 }
+    
 
-form label {
-    margin-bottom: 12px;
+#search-bar input:focus {
+    border-color: rgba(126, 239, 104, 0.8);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(126, 239, 104, 0.6);
+    outline: 0 none;
+    transition: border-color 250ms ease-in-out, box-shadow 250ms ease-in-out;
 }
+
+.nav-link:after {
+    display: block;
+    content: '';
+    border-bottom: solid 3px darkcyan;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+  }
+  .nav-link:hover:after { transform: scaleX(1); }

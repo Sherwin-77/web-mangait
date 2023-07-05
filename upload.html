@@ -56,15 +56,16 @@
     <main class="container mt-5">
         <h1>Upload Manga</h1>
         <div class="container bg-body-tertiary border">
-            <form action="#" class="d-flex flex-column p-3">
-                <label for="title-upload">Title</label>
-                <input type="text" class="form-control mb-5" name="title-upload" id="title-upload">
-                <label for="synopsis-upload">Synopsis</label>
-                <textarea name="synopsis-upload" id="synopsis-upload" rows="3" class="form-control mb-5"></textarea>
+            <form class="d-flex flex-column p-3 needs-validation">
+                <label for="title-upload" class="form-label">Title</label>
+                <input type="text" class="form-control mb-5" name="title-upload" id="title-upload" required="required">
+                <label for="synopsis-upload" class="form-label">Synopsis</label>
+                <textarea name="synopsis-upload" id="synopsis-upload" rows="3" class="form-control mb-5" required></textarea>
                 <label for="thumb-upload">Upload thumbnail (Optional)</label>
                 <input class="form-control mb-5" style="width: 25%;" type="file" name="thumb-upload" id="thumb-upload" accept="image/*">
-                <button class="btn btn-primary">Upload</button>
+                <button class="btn btn-primary mb-3" type="submit">Upload</button>
             </form>
         </div>
+        
     </main>
 </body>
