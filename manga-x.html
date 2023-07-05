@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Mangait</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <script src="./switch.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-dark navbar-expand-md">
+            <div class="container-fluid">
+                <a href="#" class="navbar-brand">
+                    <img src="logo.svg" alt="logo" width="64" height="64">
+                    <b>Mangait</b>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse mx-auto" id="navbarSupportedContent">
+                    <div class="input-group mx-auto" id="search-bar">
+                        <input type="text" class="form-control" placeholder="Search for manga">
+                        <button class="btn btn-secondary" type="button">Search</button>
+                    </div>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="./index.html" class="nav-link active">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./upload.html" class="nav-link">Upload</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./bookmarks.html" class="nav-link">Bookmarks</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="toggleTheme" class="me-5 d-none d-md-block" onclick="toggleTheme();">
+                <img src="./contrast.svg" alt="toggle" height="48">
+            </div>
+        </nav>
+    </header>
+    <main class="container mt-5">
+        <div class="row">
+            <div class="col-md-3">
+                <img src="./stellar-jade.png" alt="cover" class="img-fluid">
+            </div>
+            <div class="col-md-9">
+                <dl class="row">
+                    <dt class="col-sm-2">Title</dt>
+                    <dd class="col-sm-10">Owaaaaa</dd>
+                    <dt class="col-sm-2">Author</dt>
+                    <dd class="col-sm-10">Awootofu</dd>
+                    <dt class="col-sm-2">Synopsis</dt>
+                    <dd class="col-sm-10">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime eius
+                        dignissimos soluta quasi mollitia. Assumenda pariatur eligendi nam explicabo et libero at
+                        voluptas rem unde dolore porro sint, officia perspiciatis!
+                        Voluptatem sint porro reprehenderit perferendis cum ullam quo iste quam ipsum maiores provident
+                        asperiores ratione possimus vero blanditiis optio eum accusamus fuga doloremque, illo at
+                        repudiandae sunt? Nam, expedita quasi!
+                        Temporibus iusto vel illo, quisquam dignissimos adipisci dolore aut eligendi laudantium
+                        necessitatibus omnis quae quia, molestias aspernatur veritatis officia. Eveniet placeat maxime
+                        aliquam odit? Quo laudantium ipsum tempore maiores nesciunt!
+                        Sequi animi esse tenetur odio! Nihil velit temporibus ut fugit magni ea voluptatem doloremque
+                        doloribus repellat iste. Accusantium aut mollitia similique accusamus ad. Natus odit perferendis
+                        qui obcaecati harum dolorem!
+                        Neque at sapiente placeat veniam error corporis minima dolorem soluta fuga. Maiores consequuntur
+                        iste aut eum, blanditiis nostrum inventore vitae reiciendis error numquam nobis voluptates
+                        corrupti ipsum nam animi veniam?
+                        Nostrum qui deserunt beatae sit, dicta, aliquid amet esse odio ipsa, adipisci iure! Optio
+                        ratione eaque excepturi corporis, officiis, tempora laudantium facilis, ipsam quod doloremque
+                        nesciunt numquam alias voluptatum earum.
+                        Odit molestiae, quos eveniet nostrum aperiam consectetur voluptas tempora cupiditate quia
+                        doloremque distinctio corporis ab quas fuga, officiis dolorem at obcaecati excepturi, veniam
+                        voluptatem? Consectetur asperiores nostrum cupiditate facilis eum.
+                        Tenetur, dolor id reprehenderit consectetur, voluptatem soluta obcaecati quidem rerum dicta sint
+                        cumque, earum non nam officia architecto odio fugiat. Vitae fuga earum, molestiae atque
+                        consequatur est deserunt aliquid placeat.
+                        Velit accusantium nobis amet a ratione, natus sequi unde distinctio atque tempore et iure
+                        consequuntur inventore beatae voluptatibus odio ad exercitationem cumque magnam excepturi
+                        perspiciatis. Ratione magni odio distinctio tempora?
+                        Impedit cumque atque ad quidem molestias accusamus cum culpa possimus rerum quam, veniam,
+                        sapiente consequuntur. Ratione dolorum dolor soluta minima adipisci qui nesciunt eligendi,
+                        facilis ut aut a similique hic!</dd>
+                </dl>
+            </div>
+        </div>
+    </main>
+</body>

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="icon" href="favicon.ico?v=125" type="image/x-icon">
+    <title>Home - Mangait</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
@@ -15,39 +15,190 @@
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
+    <script src="./switch.js"></script>
 </head>
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-md bg-primary">
+        <nav class="navbar navbar-dark navbar-expand-md">
             <div class="container-fluid">
                 <a href="#" class="navbar-brand">
                     <img src="logo.svg" alt="logo" width="64" height="64">
-                    ここから入らんとする者は一切の希望を放棄せよ
+                    <b>Mangait</b>
                 </a>
-                <button class="navbar-toggler mx-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent">
                     <span class="navbar-toggler-icon"></span>
-                  </button>
+                </button>
                 <div class="collapse navbar-collapse mx-auto" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto">
+                    <div class="input-group mx-auto" id="search-bar">
+                        <input type="text" class="form-control" placeholder="Search for manga">
+                        <button class="btn btn-secondary" type="button">Search</button>
+                    </div>
+                    <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a href="#" class="nav-link">Home</a>
+                            <a href="./index.html" class="nav-link active">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">Genres</a>
+                            <a href="./upload.html" class="nav-link">Upload</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">Tags</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">About</a>
+                            <a href="./bookmarks.html" class="nav-link">Bookmarks</a>
                         </li>
                     </ul>
                 </div>
             </div>
+            <div id="toggleTheme" class="me-5 d-none d-md-block" onclick="toggleTheme();">
+                <img src="./contrast.svg" alt="toggle" height="48">
+            </div>
         </nav>
     </header>
-    <main class="container"></main>
+    <main class="container mt-5 d-flex">
+        <div class="content me-5">
+            <div class="row" id="manga-list">
+                <div class="col-md-4 mb-3">
+                    <div class="card manga-item">
+                        <img src="./stellar-jade.png" alt="thumbnail" class="card-img-top img-thumbnail">
+                        <div class="card-body">
+                            <h5 class="manga-title card-title">Netorare Manga no Kuzu Otoko ni Tensei Shita Hazu ga
+                                Heroine
+                                ga Yottekuru Ken</h5>
+                            <p class="manga-synopsis card-text">I suddenly remembered. This world is the world of an
+                                erotic
+                                manga, and that I was reincarnated as the scumbag who is supposed to steal the heroine
+                                in
+                                this world. Well, I don't have such a hobby, so I thought the heroine should get along
+                                with
+                                the protagonist. But why are you paying attention to me, heroine?</p>
+                            <a href="./manga-x.html" class="read btn btn-secondary">Read now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card manga-item">
+                        <img src="./stellar-jade.png" alt="thumbnail" class="card-img-top img-thumbnail">
+                        <div class="card-body">
+                            <h5 class="manga-title card-title">Akuyaku Reijou no Shitsuji-sama: Hametsu Flag wa Ore ga
+                                Tsubusasete Itadakimasu</h5>
+                            <p class="manga-synopsis card-text">A reincarnation story with a twist! I, Cyril, have been
+                                reborn in a new world and pledged myself to save Lady Sophia, the villainess of an otome
+                                game, from the many horrible fates that await her! I've raised her to be a proper young
+                                lady, keeping her from turning to the dark side... but apparently, she's developed
+                                feelings
+                                for me. And now the game's heroine has appeared, putting all I've accomplished at risk.
+                                Still, as her all-knowing butler, I will defy fate and ensure milady's happiness!</p>
+                            <a href="#" class="read btn btn-secondary">Read now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card manga-item">
+                        <img src="./stellar-jade.png" alt="thumbnail" class="card-img-top img-thumbnail">
+                        <div class="card-body">
+                            <h5 class="manga-title card-title">Hakanai Kimi wa Moukou wo Hajimeru</h5>
+                            <p class="manga-synopsis card-text">Kagari, an ephemeral beauty, reunites with her older
+                                childhood friend, Nana-kun, and begins her romantic assault on him.</p>
+                            <a href="#" class="read btn btn-secondary">Read now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card manga-item">
+                        <img src="./stellar-jade.png" alt="thumbnail" class="card-img-top img-thumbnail">
+                        <div class="card-body">
+                            <h5 class="manga-title card-title">Apa coba</h5>
+                            <p class="manga-synopsis card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Veniam perspiciatis quam, similique illo ea sint, enim repudiandae dicta cumque, fugit
+                                nobis numquam id voluptatibus error voluptates non sed possimus distinctio.</p>
+                            <a href="#" class="read btn btn-secondary">Read now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card manga-item">
+                        <img src="./stellar-jade.png" alt="thumbnail" class="card-img-top img-thumbnail">
+                        <div class="card-body">
+                            <h5 class="manga-title card-title">Apa coba</h5>
+                            <p class="manga-synopsis card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Veniam perspiciatis quam, similique illo ea sint, enim repudiandae dicta cumque, fugit
+                                nobis numquam id voluptatibus error voluptates non sed possimus distinctio.</p>
+                            <a href="#" class="read btn btn-secondary">Read now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card manga-item">
+                        <img src="./stellar-jade.png" alt="thumbnail" class="card-img-top img-thumbnail">
+                        <div class="card-body">
+                            <h5 class="manga-title card-title">Apa coba</h5>
+                            <p class="manga-synopsis card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Veniam perspiciatis quam, similique illo ea sint, enim repudiandae dicta cumque, fugit
+                                nobis numquam id voluptatibus error voluptates non sed possimus distinctio.</p>
+                            <a href="#" class="read btn btn-secondary">Read now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card manga-item">
+                        <img src="./stellar-jade.png" alt="thumbnail" class="card-img-top img-thumbnail">
+                        <div class="card-body">
+                            <h5 class="manga-title card-title">Apa coba</h5>
+                            <p class="manga-synopsis card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Veniam perspiciatis quam, similique illo ea sint, enim repudiandae dicta cumque, fugit
+                                nobis numquam id voluptatibus error voluptates non sed possimus distinctio.</p>
+                            <a href="#" class="read btn btn-secondary">Read now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card manga-item">
+                        <img src="./stellar-jade.png" alt="thumbnail" class="card-img-top img-thumbnail">
+                        <div class="card-body">
+                            <h5 class="manga-title card-title">Apa coba</h5>
+                            <p class="manga-synopsis card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Veniam perspiciatis quam, similique illo ea sint, enim repudiandae dicta cumque, fugit
+                                nobis numquam id voluptatibus error voluptates non sed possimus distinctio.</p>
+                            <a href="#" class="read btn btn-secondary">Read now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card manga-item">
+                        <img src="./stellar-jade.png" alt="thumbnail" class="card-img-top img-thumbnail">
+                        <div class="card-body">
+                            <h5 class="manga-title card-title">Apa coba</h5>
+                            <p class="manga-synopsis card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Veniam perspiciatis quam, similique illo ea sint, enim repudiandae dicta cumque, fugit
+                                nobis numquam id voluptatibus error voluptates non sed possimus distinctio.</p>
+                            <a href="#" class="read btn btn-secondary">Read now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="side">
+            <div class="card d-none d-md-block my-3">
+                <h4 class="card-header">Latest Upload</h4>
+                <img src="./stellar-jade.png" alt="thumbnail" class="card-img-top img-thumbnail">
+                <div class="card-body">
+                    <h5 class="manga-title card-title">Hakanai Kimi wa Moukou wo Hajimeru</h5>
+                    <p class="manga-synopsis card-text">Kagari, an ephemeral beauty, reunites with her older
+                        childhood friend, Nana-kun, and begins her romantic assault on him.</p>
+                    <a href="#" class="read btn btn-secondary">Read now</a>
+                </div>
+            </div>
+            <div class="card d-none d-md-block my-3">
+                <h4 class="card-header">Random Manga</h4>
+                <img src="./stellar-jade.png" alt="thumbnail" class="card-img-top img-thumbnail">
+                <div class="card-body">
+                    <h5 class="manga-title card-title">Hakanai Kimi wa Moukou wo Hajimeru</h5>
+                    <p class="manga-synopsis card-text">Kagari, an ephemeral beauty, reunites with her older
+                        childhood friend, Nana-kun, and begins her romantic assault on him.</p>
+                    <a href="#" class="read btn btn-secondary">Read now</a>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 
 </html>

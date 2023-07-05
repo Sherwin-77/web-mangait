@@ -1,4 +1,64 @@
-#navbarSupportedContent .nav-item {
-    margin: 0 auto;
-    font-size: 24px;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: darkslateblue;
+}
+
+header a.active {
+    font-weight: bolder;
+}
+
+header .nav-item {
+    margin: 0 18px;
+    font-size: 18px;
+    padding: 4px;    
+}
+
+
+#toggleTheme:hover {
+    cursor: pointer;
+}
+
+#search-bar {
+    width: 50%;
+}
+
+.manga-title, .manga-synopsis {
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}  
+
+.manga-synopsis {
+    -webkit-line-clamp: 3;
+}
+
+.content {
+    max-width: 75%;
+}
+
+
+.manga-item{
+    height: 100%;
+}
+
+.manga-item .card-body, .side{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.read{
+    margin-top: auto;
+}
+
+.side * {
+    flex: 0;
+}
+
+form label {
+    margin-bottom: 12px;
 }
